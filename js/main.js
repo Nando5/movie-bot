@@ -87,17 +87,24 @@ var getMovieInfo = function(movieId){
         console.log(movieTitle);
         console.log(movieOverview);
         console.log(movieReleaseDate);
-        embedMoviePosterHTML(moviePosterId);
-
         console.log(response);
 
+        embedMovieDetailsHTML(movieTitle,movieReleaseDate,movieOverview);
+        embedMoviePosterHTML(moviePosterId);
         embedVideoInHTML(movieTrailer);
     }
 };
 
+var embedMovieDetailsHTML = function(movieTitle,movieReleaseDate,movieOverview){
+    $(".movie-details").empty();
+    $(".movie-details").append("<h2>"+ movieTitle + "</h2>" +
+                                movieOverview + "<br><p><i>Released: " + movieReleaseDate + "</i>"); 
+                                
+};
+
 var embedMoviePosterHTML = function(moviePosterId){
     $(".movie-poster").empty();
-    $(".movie-poster").append("<img src='https://image.tmdb.org/t/p/w300_and_h450_bestv2" + moviePosterId + "'>");
+    $(".movie-poster").append("<img class='img-fluid' src='https://image.tmdb.org/t/p/w300_and_h450_bestv2" + moviePosterId + "'>");
 };
 
 var embedVideoInHTML = function(movieTrailer){

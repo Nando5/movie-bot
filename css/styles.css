@@ -2,8 +2,6 @@
     max-width: 1000px;
 }
 
-.movie-poster {
-    width: 120px;
-    background-color: pink;
-    height: 150px
+.movie-info {
+    margin-top: 20px;
 }
