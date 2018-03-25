@@ -1,7 +1,60 @@
+body {
+    background-color: #000;
+    font-family: 'Oswald', cursive, Arial, Helvetica, sans-serif;;
+    color: #fff;
+}
+
+input {
+    width: 100%;
+    min-height: 80px;
+    color: grey;
+    font-size: 50px;
+    text-align: center;
+    border: 0;
+}
+
 .container {
     max-width: 1000px;
 }
 
-.movie-info {
+.movie-info, .movie-container, .search-movie, .header-search {
     margin-top: 20px;
+}
+
+.header-search {
+    text-align: center;
+}
+
+.header-search img {
+    width: 30%;
+}
+
+.search-movie {
+    background-color: #ED1E79;
+    border: solid 1px #000;
+    width: 240px;
+    height: 50px;
+    color: #fff;
+    font-size: 2rem;
+}
+
+.search-bar {
+    background-color: #fff;
+    padding: 10px;
+}
+
+.search-bar h5 {
+    color: #000;
+}
+
+.footer {
+    height: 40px;
+    background-color: #F7931E;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 8px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }

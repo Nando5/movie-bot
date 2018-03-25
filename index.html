@@ -7,6 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 
     <title>Movie Bot</title>
@@ -14,12 +15,22 @@
   <body>
   
   <div class="container">
-    <h1>Movie Bot</h1>
-    <p>Name: <input type="text" name="user"></p>
-    <button class="search-movie">Search</button>
-    <button class="remove-video">Remove Video</button>
-  
-    <div class="row">
+    <div class="row header-search">
+      <div class="col-sm-12">
+          <img src="img/svg/movie-bot-logo.svg">
+          <h2>CINEMA</h2><br>
+            <div class="row">
+              <div class="col-sm-12 search-bar">
+                  <h5>Lucero Studios Proudly Presents</h5>
+                  <input type="text" name="user">
+              </div> 
+            </div>
+            
+          <button class="search-movie">SEARCH</button>
+          <!-- <button class="remove-video">Remove Video</button> -->
+      </div>
+    </div>
+    <div class="row movie-container">
       <div class="col-sm-4">
           <p class="list-of-movies list-unstyled"></p>
       </div>
@@ -38,6 +49,9 @@
       </div>
     </div> 
   </div class="container">
+  <!-- <div class="footer">
+    <p>Copyright &copy; 2018 MovieBot</p>
+  </div> -->
 
 
     <!-- Optional JavaScript -->
