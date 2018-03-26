@@ -31,7 +31,8 @@ input {
 
 .search-movie {
     background-color: #ED1E79;
-    border: solid 1px #000;
+    border: none;
+    outline: #000 solid 10px;
     width: 240px;
     height: 50px;
     color: #fff;
@@ -40,6 +41,7 @@ input {
 
 .search-bar {
     background-color: #fff;
+    border: solid 3px #ED1E79;
     padding: 10px;
 }
 
@@ -57,4 +59,29 @@ input {
     position: fixed;
     width: 100%;
     bottom: 0;
+}
+
+.decorative-hr {
+    position: absolute;
+    background-color: #ED1E79;
+    height: 2px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+#top-hr {
+    top: 5px;
+    width: 90%;
+}
+
+#middle-hr {
+    top: 28px;
+    width: 80%;
+}
+
+#bottom-hr {
+    top: 51px;
+    width: 70%;
 }
