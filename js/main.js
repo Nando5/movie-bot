@@ -98,7 +98,7 @@ var getMovieInfo = function(movieId){
 var embedMovieDetailsHTML = function(movieTitle,movieReleaseDate,movieOverview){
     $(".movie-details").empty();
     $(".movie-details").append("<h2>"+ movieTitle + "</h2>" +
-                                movieOverview + "<br><p><i>Released: " + movieReleaseDate + "</i>"); 
+                                movieOverview + "<br><br><p><i>Released: " + movieReleaseDate + "</i>"); 
                                 
 };
 
