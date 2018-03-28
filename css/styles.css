@@ -17,6 +17,15 @@ input {
     text-shadow: 0px 4px 8px #ffffff;
 }
 
+a {
+    color: #fff;
+}
+
+a:hover { 
+    color: #F7931E; 
+    text-decoration: none;
+}
+
 .container {
     max-width: 1000px;
 }

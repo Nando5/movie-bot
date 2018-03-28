@@ -52,7 +52,7 @@ var getAllMovieTitles = function(){
     var counter = id.results.length;
 
     for (i = 0; i < counter; i++) { 
-        $(".list-of-movies").append("<li data-val='"+ id.results[i].title +"'>" + id.results[i].title + "</li>");
+        $(".list-of-movies").append("<a href='#/'><li data-val='"+ id.results[i].title +"'>" + id.results[i].title + "</li></a>");
     }
     $('li').click(function() {
         // alert($(this).data('val'));
