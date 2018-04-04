@@ -133,3 +133,81 @@ a:hover {
 #bottom-light-hr {
     top: 88px;
 }
+
+
+@media only screen and (max-width: 1100px) {
+    .search-bar {
+        margin: 0 auto;
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    input {
+        font-size: 40px;
+        min-height: 60px;
+    }
+
+    h5 {
+        font-size: 16px;
+    }
+
+    .search-movie {
+        width: 180px;
+        font-size: 22px;
+    }
+
+    #top-hr {
+        width: 85%;
+    }
+
+    #middle-hr {
+        width: 75%;
+    }
+
+    #bottom-hr {
+        width: 65%;
+    }
+
+    #movie-bot-logo {
+        width: 60%;
+    }
+
+    #movie-bot-cinema {
+        width: 25%;
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    input {
+        font-size: 28px;
+        min-height: 45px;
+    }
+
+    h5 {
+        font-size: 14px;
+    }
+
+    .search-movie {
+        width: 130px;
+        font-size: 20px;
+        height: 45px;
+    }
+
+    #middle-hr {
+        top: 25px;
+    }
+
+    #bottom-hr {
+        top: 46px;
+    }
+
+    #movie-bot-logo {
+        width: 80%;
+    }
+
+    #movie-bot-cinema {
+        width: 30%;
+        margin-top: 15px;
+    }
+}

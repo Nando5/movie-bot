@@ -4,7 +4,7 @@ console.log("Movie Bot - main.js");
 // Make sure no duplicates
 // Return in alphabetical Order
 // Apply clicked movie title into search bar
-// Fix gradient
+
 // Optimise for mobile
 // secure it
 
