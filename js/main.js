@@ -1,5 +1,13 @@
 console.log("Movie Bot - main.js");
 
+// Make sure only movies with trailers/posters/overview are returned
+// Make sure no duplicates
+// Return in alphabetical Order
+// Apply clicked movie title into search bar
+// Fix gradient
+// Optimise for mobile
+// secure it
+
 var movieTrailer;
 var movieTitle;
 var movieOverview;
@@ -18,9 +26,6 @@ var newSearch = true;
     $(".remove-video").click(function(){
         $(".embed-responsive").empty();
     });
-
-
-
 
 
 var getMovieId = function(inputFromUser){
@@ -60,6 +65,7 @@ var getAllMovieTitles = function(){
         getMovieId(selectedMovie);
     });
 };
+
 
 var getMovieInfo = function(movieId){
 

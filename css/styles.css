@@ -2,8 +2,9 @@ body {
     background-color: #00042C;
     font-family: 'Oswald', cursive, Arial, Helvetica, sans-serif;;
     color: #fff;
-    background-image: url("/img/SVG/background-laser.svg");
-    background-position-y: -300px;
+    background-image: url("/img/background-laser.png");
+    background-repeat: repeat-x;
+    background-position-y: 35px;
 }
 
 input {
