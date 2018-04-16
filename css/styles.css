@@ -30,8 +30,18 @@ a:hover {
     text-decoration: none;
 }
 
+::placeholder {
+    color: #b7b7b7;
+    opacity: 1; /* Firefox */
+}
+
 .container {
     max-width: 1000px;
+}
+
+.list-heading {
+    text-decoration: underline;
+    color: #ffd802;
 }
 
 .movie-info, .movie-container, .search-movie, .header-search {
