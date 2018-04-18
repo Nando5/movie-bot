@@ -4,6 +4,8 @@ console.log("Movie Bot - main3.js");
 // clear listMovies
 
 var moviesChecked = false;
+var moviesToCheck = 0;
+var counter = 0;
 var inputFromUser;
 var moviesObject = [];
 var selectedMovie;
@@ -33,18 +35,30 @@ var defaultResponse = {
 }
 
 
-
     $(".search-movie").click(function(){
-        $(".search-result-status").empty();
-        moviesChecked = false;
-        moviesObject = [];
-        inputFromUser = $("input:text").val();
-        getMovieId(inputFromUser);
+        searchHasCommenced();
     });
 
     $(".list-heading").click(function(){
         defaultMovieList(defaultResponse);
     });
+
+var input = document.getElementById("myInput");
+input.addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        searchHasCommenced();
+    }
+});
+
+var searchHasCommenced = function() {
+    $(".search-result-status").empty();
+    moviesChecked = false;
+    counter = 0;
+    moviesObject = [];
+    inputFromUser = $("input:text").val();
+    getMovieId(inputFromUser);
+};
 
 var getMovieId = function(inputFromUser){
     var request = new XMLHttpRequest();
@@ -53,6 +67,10 @@ var getMovieId = function(inputFromUser){
     request.onreadystatechange = function() {
         if (this.readyState === 4 && this.status === 200) {
         var response = JSON.parse(this.responseText);
+        if (response.results.length === 0){
+            noResultsFound();
+            return;
+        }
         getElements(response);
         }
     }
@@ -61,6 +79,7 @@ var getMovieId = function(inputFromUser){
     request.send();
 
     getElements = function(response) {
+        moviesToCheck = response.results.length;
         for (i = 0; i < response.results.length; i++) {
             getMovieInfo(response.results[i].id);
             if (i === response.results.length-1){
@@ -107,6 +126,7 @@ var makeMovieObject = function(response) {
 
     };
     if (response.videos.results[0]) {
+        counter = counter + 1;
         moviesObject.push(new Movie(response.title, 
                                     response.release_date, 
                                     response.overview, 
@@ -114,11 +134,21 @@ var makeMovieObject = function(response) {
                                     response.videos.results[0].key
                                     ));
     } else {
+        counter = counter + 1;
+        if ((counter === moviesToCheck) && (moviesObject.length === 0)) {
+            noResultsFound();
+        }
         return;
     };
     if (moviesChecked) {
         listMovies(moviesObject);
     };
+};
+
+var noResultsFound = function() {
+    $(".search-result-status").empty();
+    $(".list-of-movies").empty();
+    $(".search-result-status").append("<i>No results:</i>");
 };
 
 var listMovies = function(moviesObject){
