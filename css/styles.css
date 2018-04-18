@@ -150,12 +150,20 @@ a:hover {
         margin: 0 auto;
         width: 90%;
     }
+
+    ::placeholder {
+        font-size: 40px;
+    }
 }
 
 @media only screen and (max-width: 600px) {
     input {
         font-size: 40px;
         min-height: 60px;
+    }
+
+    ::placeholder {
+        font-size: 25px;
     }
 
     h5 {
