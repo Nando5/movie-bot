@@ -1,8 +1,5 @@
 console.log("Movie Bot - main3.js");
 
-// error return Message, no result
-// clear listMovies
-
 var moviesChecked = false;
 var moviesToCheck = 0;
 var counter = 0;
@@ -33,7 +30,6 @@ var defaultResponse = {
         {id: 312221}
     ]
 }
-
 
     $(".search-movie").click(function(){
         searchHasCommenced();
@@ -84,7 +80,7 @@ var getMovieId = function(inputFromUser){
             getMovieInfo(response.results[i].id);
             if (i === response.results.length-1){
                 moviesChecked = true;
-                $(".search-result-status").append("<i>Search results:</i>");
+                $(".search-result-status").append("<i>We found you some movies :)</i>");
             }
         }
     }
@@ -148,7 +144,7 @@ var makeMovieObject = function(response) {
 var noResultsFound = function() {
     $(".search-result-status").empty();
     $(".list-of-movies").empty();
-    $(".search-result-status").append("<i>No results:</i>");
+    $(".search-result-status").append("<i>Sorry, we couldn't find that movie :(</i>");
 };
 
 var listMovies = function(moviesObject){

@@ -3,7 +3,7 @@ body {
     font-family: 'Oswald', cursive, Arial, Helvetica, sans-serif;;
     color: #fff;
     background-image: url("/movie-bot/img/background-laser.png");
-    background-image: url("/img/background-laser.png");
+    /* background-image: url("/img/background-laser.png"); */
     background-repeat: repeat-x;
     background-position-y: 35px;
 }
@@ -39,6 +39,15 @@ a:hover {
     max-width: 1000px;
 }
 
+.enable-collapse {
+    display: none;
+}
+
+.enable-collapse:hover {
+    text-decoration: underline;
+    color: #ffd802;
+}
+
 .list-heading {
     text-decoration: underline;
     color: #ffd802;
@@ -69,6 +78,7 @@ a:hover {
     background-color: #ffffff;
     border: solid 3px #FF00FF;
     padding: 10px;
+    margin: 0 auto;
 }
 
 .search-bar h5 {
@@ -144,8 +154,18 @@ a:hover {
     top: 88px;
 }
 
+@media only screen and (min-width: 991px) {
+    .collapse {
+        display: block;
+    }
+}
 
-@media only screen and (max-width: 1100px) {
+
+@media only screen and (max-width: 991px) {
+    body {
+        background-position-y: 30px;  
+    }
+    
     .search-bar {
         margin: 0 auto;
         width: 90%;
@@ -154,9 +174,44 @@ a:hover {
     ::placeholder {
         font-size: 40px;
     }
+
+    .enable-collapse {
+        display: inline;
+    }
+
+    .movie-container {
+        text-align: center;
+    }
+
+    .embed-responsive {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .movie-info {
+        width: 93%;
+        margin: 20px auto 0 auto;
+    }
+
+    .movie-details {
+        text-align: left;
+    }
+
+    #top-hr {
+        width: 87%;
+    }
+
+    #middle-hr {
+        width: 78%;
+    }
+
 }
 
 @media only screen and (max-width: 600px) {
+    body {
+        background-position-y: -10px;  
+    }
+
     input {
         font-size: 40px;
         min-height: 60px;
@@ -196,7 +251,18 @@ a:hover {
     }
 }
 
+@media only screen and (max-width: 575px) {
+    .movie-poster {
+        width: 40%;
+        margin: 0 auto;
+    }
+}
+
 @media only screen and (max-width: 440px) {
+    body {
+        background-position-y: -35px;  
+    }
+
     input {
         font-size: 28px;
         min-height: 45px;
