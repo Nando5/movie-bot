@@ -57,6 +57,10 @@ a:hover {
     margin-top: 20px;
 }
 
+.movie-details {
+    text-align: left;
+}
+
 .header-search {
     text-align: center;
 }
@@ -179,6 +183,14 @@ a:hover {
         display: inline;
     }
 
+    #video-player {
+        margin-top: 10px;
+    }
+
+    .list-of-movies {
+        margin-top: 10px;
+    }
+
     .movie-container {
         text-align: center;
     }
@@ -213,12 +225,12 @@ a:hover {
     }
 
     input {
-        font-size: 40px;
-        min-height: 60px;
+        font-size: 16px;
+        min-height: 50px;
     }
 
     ::placeholder {
-        font-size: 25px;
+        font-size: 18px;
     }
 
     h5 {
@@ -254,7 +266,11 @@ a:hover {
 @media only screen and (max-width: 575px) {
     .movie-poster {
         width: 40%;
-        margin: 0 auto;
+        margin: 0 auto 20px auto;
+    }
+
+    .movie-details {
+        text-align: center;
     }
 }
 
@@ -264,8 +280,7 @@ a:hover {
     }
 
     input {
-        font-size: 28px;
-        min-height: 45px;
+        min-height: 20px;
     }
 
     h5 {

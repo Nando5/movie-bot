@@ -1,4 +1,4 @@
-console.log("Movie Bot - main3.js");
+$(document).ready(function(){
 
 var moviesChecked = false;
 var moviesToCheck = 0;
@@ -30,7 +30,10 @@ var defaultResponse = {
         {id: 312221}
     ]
 }
-
+    $(".enable-collapse").click(function(){
+        $(this).text($(this).text() === 'VIEW LESS' ? 'VIEW ALL' : 'VIEW LESS');
+    });
+    
     $(".search-movie").click(function(){
         searchHasCommenced();
     });
@@ -209,6 +212,8 @@ var defaultMovieList = function(response) {
 }
 
 defaultMovieList(defaultResponse);
+
+});
 
 
 
