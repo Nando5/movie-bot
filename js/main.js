@@ -1,4 +1,4 @@
-$(document).ready(function(){
+// $(document).ready(function(){
 
 var moviesChecked = false;
 var moviesToCheck = 0;
@@ -163,7 +163,13 @@ var listMovies = function(moviesObject){
 
     $('li').click(function() {
         selectedMovie = $(this).data('val');
+        
+        //collapse list of movies once movie is selected - only when collapse func is on.
+        if($('.enable-collapse').is(':visible')) {
+            $('.enable-collapse').click();
+        }
         renderMovie(selectedMovie);
+        
     });
 };
 
@@ -213,7 +219,7 @@ var defaultMovieList = function(response) {
 
 defaultMovieList(defaultResponse);
 
-});
+// });
 
 
 
