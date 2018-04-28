@@ -1,4 +1,4 @@
-// $(document).ready(function(){
+$(document).ready(function(){
 
 var moviesChecked = false;
 var moviesToCheck = 0;
@@ -219,7 +219,7 @@ var defaultMovieList = function(response) {
 
 defaultMovieList(defaultResponse);
 
-// });
+});
 
 
 
